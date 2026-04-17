@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  /* We can add custom themes here later if needed, but default is fine */
+  --color-prizm-light: #D0BDF4;
+  --color-prizm-deep: #8B5CF6;
 }
 
 .clip-triangle {

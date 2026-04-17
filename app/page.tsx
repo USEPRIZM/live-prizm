@@ -1,9 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
+import Chart from '@/components/Chart';
+import InteractivePrompt from '@/components/InteractivePrompt';
 
 export default function PrizmLandingPage() {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-fuchsia-200">
+    <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-prizm-light selection:text-slate-900">
       
       {/* Navigation */}
       <nav className="max-w-6xl mx-auto px-6 py-8 flex justify-between items-center">
@@ -18,7 +20,6 @@ export default function PrizmLandingPage() {
           />
           <span className="text-3xl font-bold tracking-tight text-slate-900">PRIZM</span>
         </div>
-        {/* Navigation is now clean and minimal */}
       </nav>
 
       <main className="max-w-6xl mx-auto px-6">
@@ -26,14 +27,14 @@ export default function PrizmLandingPage() {
         {/* Section 1: Signature Hero */}
         <section className="pt-24 pb-12 text-center max-w-4xl mx-auto px-4">
           <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight text-slate-900">
-            Unblind the <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#d946ef] to-[#a21caf] inline-block">Data.</span>
+            Unblind the <span className="bg-clip-text text-transparent bg-gradient-to-r from-prizm-deep to-[#a21caf] inline-block">Data.</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
             Complexity shouldn't be a barrier to insight. We built a visual environment for independent minds to refine, simulate, and validate their market theories with institutional-grade precision.
           </p>
           
           <div className="mt-4">
-            <span className="inline-block px-8 py-4 rounded-full border border-fuchsia-100 bg-fuchsia-50/50 text-[#d946ef] font-bold tracking-widest text-lg shadow-sm">
+            <span className="inline-block px-8 py-4 rounded-full border border-prizm-light bg-prizm-light/20 text-prizm-deep font-bold tracking-widest text-lg shadow-sm">
               COMING SOON
             </span>
           </div>
@@ -50,7 +51,18 @@ export default function PrizmLandingPage() {
           </p>
         </section>
 
-        {/* Section 3: What is Prizm? */}
+        {/* Section 3: Visualizer Intro */}
+        <section className="py-12 text-center max-w-5xl mx-auto">
+           <h2 className="text-4xl font-bold mb-4 tracking-tighter leading-tight text-prizm-deep">Historical Sandbox</h2>
+           <p className="text-xl text-slate-500 leading-relaxed mb-12">Simulate real markets natively with institutional grade performance.</p>
+           
+           {/* Chart Component Integration */}
+           <div className="mx-auto w-full max-w-4xl mb-12">
+             <Chart />
+           </div>
+        </section>
+
+        {/* Section 4: What is Prizm? */}
         <section className="py-20 border-t border-slate-100 bg-slate-50 rounded-[3rem] px-8 text-center max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Evolving the Analytical Experience</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
@@ -58,10 +70,10 @@ export default function PrizmLandingPage() {
           </p>
         </section>
 
-        {/* Section 4: Features */}
+        {/* Section 5: Features */}
         <section className="py-24 border-t border-slate-100">
           <div className="text-center mb-24 max-w-2xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 tracking-tighter leading-tight text-[#d946ef]">The Double Prism Engine</h2>
+            <h2 className="text-4xl font-bold mb-4 tracking-tighter leading-tight text-prizm-deep">The Double Prism Engine</h2>
             <p className="text-xl text-slate-500 leading-relaxed">Engineering clarity through multi-threaded simulation.</p>
           </div>
           
@@ -70,32 +82,10 @@ export default function PrizmLandingPage() {
             {/* Feature 1: The Effect */}
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="w-full md:w-1/2 flex justify-center">
-                <div className="w-full max-w-sm bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
-                  <div className="text-xs font-mono text-slate-400 mb-2 uppercase tracking-wider text-left">Input Prompt</div>
-                  <div className="bg-white border border-slate-200 p-3 rounded-lg text-sm font-medium mb-6 text-slate-700 text-left">
-                    "Earn 2% Profit on Nifty"
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="h-6 w-px bg-slate-300"></div>
-                    <div className="w-full border-t border-slate-300 flex justify-between px-6 pt-6 relative">
-                      <div className="flex flex-col items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-[#d946ef] absolute -top-1 left-6"></div>
-                        <span className="text-xs font-mono bg-fuchsia-50 text-fuchsia-700 px-2 py-1 rounded">RSI &gt; 70</span>
-                      </div>
-                      <div className="flex flex-col items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-[#d946ef] absolute -top-1 left-1/2 -translate-x-1/2"></div>
-                        <span className="text-xs font-mono bg-fuchsia-50 text-fuchsia-700 px-2 py-1 rounded">Vol Spike</span>
-                      </div>
-                      <div className="flex flex-col items-center gap-2">
-                        <div className="h-2 w-2 rounded-full bg-[#d946ef] absolute -top-1 right-6"></div>
-                        <span className="text-xs font-mono bg-fuchsia-50 text-fuchsia-700 px-2 py-1 rounded">Trailing Stop</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <InteractivePrompt />
               </div>
               <div className="w-full md:w-1/2 text-left">
-                <div className="w-12 h-12 bg-fuchsia-50 rounded-full flex items-center justify-center text-[#d946ef] font-bold mb-6 shadow-sm border border-fuchsia-100">1</div>
+                <div className="w-12 h-12 bg-prizm-light/30 rounded-full flex items-center justify-center text-prizm-deep font-bold mb-6 shadow-sm border border-prizm-light/50">1</div>
                 <h3 className="text-3xl font-extrabold mb-4 tracking-tight">The Double Prism Effect.</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Our engine disperses your initial hypothesis into multiple logical threads, allowing you to examine strategy integrity across various market conditions.
@@ -107,9 +97,9 @@ export default function PrizmLandingPage() {
             <div className="flex flex-col md:flex-row-reverse items-center gap-12">
               <div className="w-full md:w-1/2 flex justify-center">
                  <div className="w-full max-w-sm relative text-left">
-                    <div className="bg-white border-2 border-[#d946ef] shadow-lg rounded-xl p-4 w-64 relative z-10 mb-4 ml-8">
+                    <div className="bg-white border-2 border-prizm-deep shadow-lg rounded-xl p-4 w-64 relative z-10 mb-4 ml-8">
                       <div className="flex items-center justify-between mb-2">
-                        <span className="text-xs font-bold text-[#d946ef] uppercase tracking-wider">Condition</span>
+                        <span className="text-xs font-bold text-prizm-deep uppercase tracking-wider">Condition</span>
                         <div className="h-2 w-2 rounded-full bg-slate-200"></div>
                       </div>
                       <div className="font-mono text-sm text-slate-700">Moving Average (50) crosses Above Price</div>
@@ -125,7 +115,7 @@ export default function PrizmLandingPage() {
                  </div>
               </div>
               <div className="w-full md:w-1/2 text-left">
-                <div className="w-12 h-12 bg-fuchsia-50 rounded-full flex items-center justify-center text-[#d946ef] font-bold mb-6 shadow-sm border border-fuchsia-100">2</div>
+                <div className="w-12 h-12 bg-prizm-light/30 rounded-full flex items-center justify-center text-prizm-deep font-bold mb-6 shadow-sm border border-prizm-light/50">2</div>
                 <h3 className="text-3xl font-extrabold mb-4 tracking-tight">Modular Logic, Zero Code.</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Build strategies in our high-fidelity visual canvas. Drag-and-drop interlocking digital blocks to connect professional-grade indicators and patterns.
@@ -137,7 +127,7 @@ export default function PrizmLandingPage() {
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="w-full md:w-1/2 flex justify-center">
                  <div className="w-full max-w-sm bg-slate-900 rounded-2xl p-6 shadow-xl overflow-hidden relative text-left">
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#d946ef] to-transparent opacity-50"></div>
+                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-prizm-deep to-transparent opacity-50"></div>
                     <div className="flex items-center gap-2 mb-6 border-b border-slate-800 pb-4">
                       <div className="w-3 h-3 rounded-full bg-red-500"></div>
                       <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -147,7 +137,7 @@ export default function PrizmLandingPage() {
                     <div className="font-mono text-sm space-y-2">
                       <div className="text-slate-400">&gt; Initializing Historical Data... <span className="text-green-400">OK</span></div>
                       <div className="text-slate-400">&gt; Processing 5 years (2019-2024)...</div>
-                      <div className="text-[#d946ef] animate-pulse">&gt; Executing trades... 14,203 simulated</div>
+                      <div className="text-prizm-light animate-pulse">&gt; Executing trades... 14,203 simulated</div>
                       <div className="pt-4 border-t border-slate-800 mt-4 flex justify-between text-white">
                         <span>Win Rate: <strong className="text-green-400">68.4%</strong></span>
                         <span>Max DD: <strong className="text-red-400">-12.1%</strong></span>
@@ -156,7 +146,7 @@ export default function PrizmLandingPage() {
                  </div>
               </div>
               <div className="w-full md:w-1/2 text-left">
-                <div className="w-12 h-12 bg-fuchsia-50 rounded-full flex items-center justify-center text-[#d946ef] font-bold mb-6 shadow-sm border border-fuchsia-100">3</div>
+                <div className="w-12 h-12 bg-prizm-light/30 rounded-full flex items-center justify-center text-prizm-deep font-bold mb-6 shadow-sm border border-prizm-light/50">3</div>
                 <h3 className="text-3xl font-extrabold mb-4 tracking-tight">The Time Machine.</h3>
                 <p className="text-lg text-slate-600 leading-relaxed">
                   Validation requires data. Our simulation engine processes 5+ years of historical market cycles in seconds to provide a quiet, objective look at the past.
@@ -174,7 +164,7 @@ export default function PrizmLandingPage() {
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-start gap-4 text-left">
             <div className="font-bold text-xl tracking-tight text-slate-400">PRIZM</div>
-            <div className="text-[#d946ef] font-semibold text-lg">
+            <div className="text-prizm-deep font-semibold text-lg">
               Proudly being built in Ahmedabad.
             </div>
           </div>
@@ -184,7 +174,7 @@ export default function PrizmLandingPage() {
               href="https://instagram.com/useprizm.in" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-slate-500 hover:text-[#d946ef] transition-colors"
+              className="flex items-center gap-2 text-slate-500 hover:text-prizm-deep transition-colors"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
