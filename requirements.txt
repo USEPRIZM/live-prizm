@@ -1,6 +1,11 @@
-pandas
-yfinance
 fastapi
+yfinance
 uvicorn
+aiosqlite
+pandas
 pydantic
+ta
+pytrends
+google-genai
 python-dotenv
+feedparser

@@ -21,7 +21,7 @@ export default function InteractivePrompt() {
     
     setIsLoading(true);
     try {
-      const res = await fetch('http://localhost:8000/api/generate-strategy', {
+      const res = await fetch((process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000") + '/api/generate-strategy', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt })
@@ -47,12 +47,12 @@ export default function InteractivePrompt() {
           value={prompt}
           onChange={(e) => setPrompt(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && handleGenerate()}
-          className="w-full bg-white border border-slate-200 p-3 pr-24 rounded-lg text-sm font-medium text-slate-700 text-left focus:outline-none focus:ring-2 focus:ring-prizm-deep/20 focus:border-prizm-deep transition-all"
+          className="w-full bg-white border border-slate-200 p-3 pr-24 rounded-lg text-sm font-medium text-slate-700 text-left focus:outline-none focus:ring-2 focus:ring-brand-purple/20 focus:border-brand-purple transition-all"
         />
         <button 
           onClick={handleGenerate}
           disabled={isLoading}
-          className="absolute right-1 top-1 bottom-1 px-3 bg-prizm-deep hover:bg-prizm-deep/90 text-white rounded-md text-xs font-bold transition-colors disabled:opacity-70"
+          className="absolute right-1 top-1 bottom-1 px-3 bg-brand-purple hover:bg-brand-purple/90 text-white rounded-md text-xs font-bold transition-colors disabled:opacity-70"
         >
           {isLoading ? '...' : 'GENERATE'}
         </button>
@@ -63,8 +63,8 @@ export default function InteractivePrompt() {
         <div className="w-full border-t border-slate-300 flex justify-center px-2 pt-6 relative min-h-[60px]">
           {blocks.map((block, idx) => (
             <div key={idx} className="flex flex-col items-center mx-2 animate-in fade-in slide-in-from-top-4 duration-500">
-              <div className="h-2 w-2 rounded-full bg-prizm-deep absolute -top-1"></div>
-              <span className="text-xs font-mono bg-prizm-light/30 text-prizm-deep px-2 py-1 rounded whitespace-nowrap mt-2">
+              <div className="h-2 w-2 rounded-full bg-brand-purple absolute -top-1"></div>
+              <span className="text-xs font-mono bg-brand-purple/30 text-brand-purple px-2 py-1 rounded whitespace-nowrap mt-2">
                 {block.type} {block.label}
               </span>
             </div>

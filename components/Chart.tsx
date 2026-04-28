@@ -31,7 +31,7 @@ export default function Chart() {
       <div className="flex h-[400px] w-full items-center justify-center bg-slate-50 text-slate-400 rounded-2xl border border-slate-200">
         <div className="animate-pulse flex items-center gap-2">
           <div className="h-3 w-3 bg-prizm-light rounded-full"></div>
-          <div className="h-3 w-3 bg-prizm-deep rounded-full"></div>
+          <div className="h-3 w-3 bg-brand-purple rounded-full"></div>
           <span className="ml-2 font-mono text-sm">Fetching Data...</span>
         </div>
       </div>
@@ -82,10 +82,10 @@ export default function Chart() {
             <Line
               type="monotone"
               dataKey="close"
-              stroke="var(--color-prizm-deep)"
+              stroke="var(--color-brand-purple)"
               strokeWidth={3}
               dot={false}
-              activeDot={{ r: 6, fill: "var(--color-prizm-deep)", stroke: "#fff", strokeWidth: 3 }}
+              activeDot={{ r: 6, fill: "var(--color-brand-purple)", stroke: "#fff", strokeWidth: 3 }}
               animationDuration={1500}
             />
           </LineChart>
