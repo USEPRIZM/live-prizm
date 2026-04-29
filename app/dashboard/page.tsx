@@ -312,7 +312,7 @@ export default function DashboardPage() {
                   </div>
                   <div className="flex items-center gap-3 text-sm">
                     <Calendar className="w-4 h-4 text-sandbox-muted" />
-                    <span className="text-sandbox-text">Joined {new Date(profile.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}</span>
+                    <span className="text-sandbox-text">Joined {profile.createdAt ? new Date(profile.createdAt).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" }) : "Recently"}</span>
                   </div>
                 </div>
               </div>
@@ -477,7 +477,7 @@ export default function DashboardPage() {
                   <h3 className="text-xs font-bold uppercase tracking-wider">Member Since</h3>
                 </div>
                 <div className="text-sm font-mono font-bold mt-1">
-                  {new Date(profile.createdAt).toLocaleDateString("en-IN", { month: "short", year: "numeric" })}
+                  {profile.createdAt ? new Date(profile.createdAt).toLocaleDateString("en-IN", { month: "short", year: "numeric" }) : "Recently"}
                 </div>
               </div>
             </div>
