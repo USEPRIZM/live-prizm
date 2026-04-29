@@ -249,6 +249,7 @@ export default function PrizmLandingPage() {
         </div>
       </footer>
       
+      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </div>
   );
 }
