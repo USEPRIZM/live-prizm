@@ -32,7 +32,7 @@ export default function Navbar() {
 
         {/* Center Links */}
         <div className="hidden md:flex items-center space-x-8 bg-white/5 border border-white/10 rounded-full px-6 py-2 backdrop-blur-md">
-          <Link href="/features" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Features</Link>
+          <Link href="/features" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">What We Do</Link>
           <Link href="/markets" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Markets</Link>
           <Link 
             href={user ? "/quant" : "#"} 

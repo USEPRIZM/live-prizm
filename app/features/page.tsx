@@ -31,7 +31,7 @@ export default function FeaturesPage() {
         <div className="grid md:grid-cols-2 gap-6">
           
           {/* Feature 1 */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden">
+          <motion.div id="smart-risk" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.1 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden scroll-mt-24">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <ShieldCheck className="w-32 h-32 text-brand-purple" />
             </div>
@@ -49,7 +49,7 @@ export default function FeaturesPage() {
           </motion.div>
 
           {/* Feature 2 */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden">
+          <motion.div id="walk-forward" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden scroll-mt-24">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <Activity className="w-32 h-32 text-blue-400" />
             </div>
@@ -67,7 +67,7 @@ export default function FeaturesPage() {
           </motion.div>
 
           {/* Feature 3 */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden">
+          <motion.div id="alt-data" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.3 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden scroll-mt-24">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <Globe2 className="w-32 h-32 text-emerald-400" />
             </div>
@@ -85,7 +85,7 @@ export default function FeaturesPage() {
           </motion.div>
 
           {/* Feature 4 */}
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden">
+          <motion.div id="nlp" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 transition-colors group relative overflow-hidden scroll-mt-24">
             <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <BrainCircuit className="w-32 h-32 text-[#d8b4fe]" />
             </div>
@@ -105,7 +105,7 @@ export default function FeaturesPage() {
         </div>
 
         {/* Real Costs Banner */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="mt-6 w-full bg-gradient-to-r from-white/5 to-transparent border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+        <motion.div id="tax-simulation" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.5 }} className="mt-6 w-full bg-gradient-to-r from-white/5 to-transparent border border-white/10 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 scroll-mt-24">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-4">
               <BarChart3 className="w-6 h-6 text-yellow-400" />
@@ -120,10 +120,59 @@ export default function FeaturesPage() {
           </Link>
         </motion.div>
 
+        {/* How to Use & Guidelines */}
+        <motion.div id="how-to-use" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.6 }} className="mt-16 bg-white/5 border border-brand-purple/30 rounded-3xl p-8 md:p-12 scroll-mt-24">
+          <h2 className="text-3xl font-extrabold mb-6 tracking-tight text-white">How to Use Prizm & Guidelines</h2>
+          
+          <div className="space-y-6 text-slate-300">
+            <div>
+              <h3 className="text-xl font-bold text-brand-purple mb-2">1. Getting Started in the Sandbox</h3>
+              <p className="text-sm leading-relaxed mb-2">The Sandbox is where you build your strategies. Simply enter your trading logic in plain English (e.g., "Buy Nifty when RSI is below 30"). The AI will parse this into executable code blocks.</p>
+              <ul className="list-disc pl-5 text-sm space-y-1">
+                <li>Be as specific as possible with indicators (e.g., "50-day Moving Average").</li>
+                <li>Specify conditions for both entry (Buy) and exit (Sell).</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-brand-purple mb-2">2. Using Credits</h3>
+              <p className="text-sm leading-relaxed mb-2">Prizm uses a credit system to manage server loads. Every account starts with 50 credits and refreshes daily.</p>
+              <ul className="list-disc pl-5 text-sm space-y-1">
+                <li><strong>Generating Strategies:</strong> 2 Credits</li>
+                <li><strong>Running Backtests:</strong> 1 Credit</li>
+                <li><strong>Analyzing News:</strong> 2 Credits</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-brand-purple mb-2">3. General Guidelines</h3>
+              <p className="text-sm leading-relaxed mb-2">To get the best results, remember that past performance is not indicative of future results. Prizm provides simulation, not financial advice.</p>
+              <ul className="list-disc pl-5 text-sm space-y-1">
+                <li>Always test strategies over long periods (2-5 years) to ensure they aren't overfitted to a specific month.</li>
+                <li>Ensure you have realistic expectations; strategies with 90% win rates in the Sandbox usually fail in live markets due to unforeseen slippage.</li>
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Need Help Section */}
+        <motion.div id="help" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.7 }} className="mt-8 text-center bg-black/50 border border-white/10 rounded-3xl p-8 md:p-12 scroll-mt-24">
+          <h3 className="text-2xl font-bold mb-4 text-white">Need Help?</h3>
+          <p className="text-slate-400 mb-6">If you have any questions, encounter a bug, or need help building a complex strategy, our team is here for you.</p>
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="mailto:useprizm.in@gmail.com" className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/20 rounded-xl font-bold transition-colors">
+              useprizm.in
+            </a>
+            <a href="mailto:swarnimera@gmail.com" className="px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/20 rounded-xl font-bold transition-colors">
+              swarnimera@gmail.com
+            </a>
+          </div>
+        </motion.div>
+
       </section>
 
       {/* Footer */}
-      <footer className="mt-20 border-t border-white/10 py-8 text-center">
+      <footer className="mt-10 border-t border-white/10 py-8 text-center">
         <p className="text-slate-500 text-sm font-mono">Prizm © 2026. Built for independent minds.</p>
       </footer>
     </div>

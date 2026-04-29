@@ -36,8 +36,15 @@ export default function PrizmLandingPage() {
             >
               Launch Sandbox →
             </button>
-            <span className="text-sm text-slate-400 font-mono">Free • Signup required</span>
+            <Link 
+              href="/features#how-to-use"
+              className="w-10 h-10 rounded-full bg-white/5 border border-white/20 flex items-center justify-center text-slate-300 hover:text-white hover:bg-white/10 transition-colors shrink-0"
+              title="How to Use & Guidelines"
+            >
+              ?
+            </Link>
           </div>
+          <div className="mt-3 text-sm text-slate-400 font-mono">Free • Signup required</div>
         </section>
 
         {/* Section 2: Story Behind the Name */}
@@ -86,7 +93,10 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">1</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white">The Double Prism Effect.</h3>
+                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                  The Double Prism Effect.
+                  <Link href="/features#walk-forward" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
+                </h3>
                 <p className="text-lg text-slate-300 leading-relaxed">
                   Our engine disperses your initial hypothesis into multiple logical threads, allowing you to examine strategy integrity across various market conditions.
                 </p>
@@ -116,7 +126,10 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">2</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white">Modular Logic, Zero Code.</h3>
+                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                  Modular Logic, Zero Code.
+                  <Link href="/features#how-to-use" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
+                </h3>
                 <p className="text-lg text-slate-300 leading-relaxed">
                   Build strategies in our high-fidelity visual canvas. Drag-and-drop interlocking digital blocks to connect professional-grade indicators and patterns.
                 </p>
@@ -147,7 +160,10 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">3</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white">The Time Machine.</h3>
+                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                  The Time Machine.
+                  <Link href="/features#tax-simulation" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
+                </h3>
                 <p className="text-lg text-slate-300 leading-relaxed">
                   Validation requires data. Our simulation engine processes 5+ years of historical market cycles in seconds to provide a quiet, objective look at the past.
                 </p>
@@ -178,7 +194,10 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">4</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white">Speak Your Strategy.</h3>
+                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                  Speak Your Strategy.
+                  <Link href="/features#nlp" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
+                </h3>
                 <p className="text-lg text-slate-300 leading-relaxed">
                   Our AI-powered NLP engine understands how Indian traders actually speak. Type your strategy in natural language (or even Hinglish) and watch it instantly convert into precise, executable logic blocks.
                 </p>
@@ -209,7 +228,10 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">5</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white">Social Copy Trading.</h3>
+                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                  Social Copy Trading.
+                  <Link href="/features#how-to-use" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
+                </h3>
                 <p className="text-lg text-slate-300 leading-relaxed">
                   Don't start from scratch. Browse the Community Leaderboard to discover high-performing strategies. Analyze their backtest results, and clone their logic directly into your sandbox with a single click.
                 </p>
