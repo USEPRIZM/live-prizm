@@ -17,22 +17,22 @@ export default function PrizmLandingPage() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-brand-purple/30 selection:text-white">
-      <main className="max-w-6xl mx-auto px-6">
+      <main className="max-w-6xl mx-auto px-4 sm:px-6">
         
         {/* Section 1: Signature Hero */}
-        <section className="pt-32 pb-16 text-center max-w-4xl mx-auto px-4 relative z-10">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-purple/20 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
-          <h1 className="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight text-white drop-shadow-md">
+        <section className="pt-20 sm:pt-32 pb-12 sm:pb-16 text-center max-w-4xl mx-auto px-4 relative z-10">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-brand-purple/20 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tighter mb-4 sm:mb-6 leading-tight text-white drop-shadow-md">
             Unblind the <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-purple to-[#d8b4fe] inline-block">Data.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl md:text-2xl text-slate-400 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
             Complexity shouldn't be a barrier to insight. We built a visual environment for independent minds to refine, simulate, and validate their market theories with institutional-grade precision.
           </p>
           
           <div className="mt-4 flex flex-col sm:flex-row items-center gap-4 justify-center">
             <button 
               onClick={() => user ? router.push('/sandbox') : setIsLoginOpen(true)}
-              className="px-10 py-4 rounded-full bg-gradient-to-r from-brand-purple to-[#a21caf] text-white font-extrabold tracking-wide text-lg shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_40px_rgba(139,92,246,0.6)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="px-8 sm:px-10 py-3 sm:py-4 rounded-full bg-gradient-to-r from-brand-purple to-[#a21caf] text-white font-extrabold tracking-wide text-base sm:text-lg shadow-[0_0_30px_rgba(139,92,246,0.4)] hover:shadow-[0_0_40px_rgba(139,92,246,0.6)] transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Launch Sandbox →
             </button>
@@ -78,22 +78,22 @@ export default function PrizmLandingPage() {
         </section>
 
         {/* Section 5: Features */}
-        <section className="py-24 border-t border-white/10 relative z-10">
-          <div className="text-center mb-24 max-w-2xl mx-auto">
-            <h2 className="text-4xl font-bold mb-4 tracking-tighter leading-tight text-white drop-shadow-[0_0_15px_rgba(139,92,246,0.3)]">The Double Prism Engine</h2>
-            <p className="text-xl text-slate-400 leading-relaxed">Engineering clarity through multi-threaded simulation.</p>
+        <section className="py-12 sm:py-24 border-t border-white/10 relative z-10">
+          <div className="text-center mb-12 sm:mb-24 max-w-2xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tighter leading-tight text-white drop-shadow-[0_0_15px_rgba(139,92,246,0.3)]">The Double Prism Engine</h2>
+            <p className="text-lg sm:text-xl text-slate-400 leading-relaxed">Engineering clarity through multi-threaded simulation.</p>
           </div>
           
-          <div className="flex flex-col space-y-24 md:space-y-32">
+          <div className="flex flex-col space-y-16 sm:space-y-24 md:space-y-32">
             
             {/* Feature 1: The Effect */}
-            <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="flex flex-col md:flex-row items-center gap-8 sm:gap-12">
               <div className="w-full md:w-1/2 flex justify-center">
                 <InteractivePrompt />
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">1</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
                   The Double Prism Effect.
                   <Link href="/features#walk-forward" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
                 </h3>
@@ -126,7 +126,7 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">2</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
                   Modular Logic, Zero Code.
                   <Link href="/features#how-to-use" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
                 </h3>
@@ -160,7 +160,7 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">3</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
                   The Time Machine.
                   <Link href="/features#tax-simulation" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
                 </h3>
@@ -194,7 +194,7 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">4</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
                   Speak Your Strategy.
                   <Link href="/features#nlp" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
                 </h3>
@@ -228,7 +228,7 @@ export default function PrizmLandingPage() {
               </div>
               <div className="w-full md:w-1/2 text-left">
                 <div className="w-12 h-12 bg-brand-purple/20 border border-brand-purple/50 rounded-full flex items-center justify-center text-brand-purple font-bold mb-6 shadow-[0_0_15px_rgba(139,92,246,0.3)]">5</div>
-                <h3 className="text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
+                <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 tracking-tight text-white flex items-center gap-3">
                   Social Copy Trading.
                   <Link href="/features#how-to-use" className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center text-xs font-bold text-slate-300 hover:text-white hover:bg-brand-purple transition-colors" title="Learn More">?</Link>
                 </h3>

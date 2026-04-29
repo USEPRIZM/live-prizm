@@ -39,7 +39,7 @@ export default function FeaturesPage() {
 
           <div className="space-y-6">
             {/* Sandbox */}
-            <div id="sandbox-explained" className="bg-gradient-to-r from-brand-purple/10 to-transparent border border-brand-purple/20 rounded-2xl p-8 flex items-start gap-6 scroll-mt-24">
+            <div id="sandbox-explained" className="bg-gradient-to-r from-brand-purple/10 to-transparent border border-brand-purple/20 rounded-2xl p-5 sm:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 scroll-mt-24">
               <div className="w-14 h-14 rounded-xl bg-brand-purple/20 border border-brand-purple/30 flex items-center justify-center shrink-0">
                 <Target className="w-7 h-7 text-brand-purple" />
               </div>
@@ -52,7 +52,7 @@ export default function FeaturesPage() {
             </div>
 
             {/* Quant Edge */}
-            <div id="quant-explained" className="bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-2xl p-8 flex items-start gap-6 scroll-mt-24">
+            <div id="quant-explained" className="bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-2xl p-5 sm:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 scroll-mt-24">
               <div className="w-14 h-14 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
                 <Sparkles className="w-7 h-7 text-emerald-400" />
               </div>
@@ -65,7 +65,7 @@ export default function FeaturesPage() {
             </div>
 
             {/* Market Pulse */}
-            <div id="market-explained" className="bg-gradient-to-r from-blue-500/10 to-transparent border border-blue-500/20 rounded-2xl p-8 flex items-start gap-6 scroll-mt-24">
+            <div id="market-explained" className="bg-gradient-to-r from-blue-500/10 to-transparent border border-blue-500/20 rounded-2xl p-5 sm:p-8 flex flex-col sm:flex-row items-start gap-4 sm:gap-6 scroll-mt-24">
               <div className="w-14 h-14 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
                 <Newspaper className="w-7 h-7 text-blue-400" />
               </div>

@@ -158,7 +158,7 @@ export default function MarketsPage() {
     );
   }
   return (
-    <div className="h-[calc(100vh-80px)] flex flex-col bg-transparent text-white font-sans selection:bg-brand-purple/30 selection:text-white overflow-hidden">
+    <div className="h-[calc(100vh-60px)] sm:h-[calc(100vh-80px)] flex flex-col bg-transparent text-white font-sans selection:bg-brand-purple/30 selection:text-white overflow-hidden">
       <div className="shrink-0 max-w-[1400px] mx-auto w-full px-4 pt-4 flex items-center justify-between">
         <h1 className="text-xl font-bold flex items-center gap-2 tracking-tight text-white">
           <Newspaper className="w-5 h-5 text-brand-purple" /> Market Pulse
@@ -181,10 +181,10 @@ export default function MarketsPage() {
       )}
 
       {/* Main Content - fills remaining viewport */}
-      <div className="flex-1 flex min-h-0 max-w-[1400px] mx-auto w-full p-4 gap-4">
+      <div className="flex-1 flex flex-col md:flex-row min-h-0 max-w-[1400px] mx-auto w-full p-2 sm:p-4 gap-2 sm:gap-4">
 
         {/* Left Column: News Feed — independently scrollable */}
-        <div className="w-[380px] shrink-0 glass-panel rounded-2xl flex flex-col overflow-hidden">
+        <div className={`${activeItem ? 'hidden md:flex' : 'flex'} w-full md:w-[380px] md:shrink-0 glass-panel rounded-2xl flex-col overflow-hidden`}>
           <div className="shrink-0 px-5 py-4 flex items-center justify-between border-b border-sandbox-border/50">
             <h2 className="text-xs font-bold uppercase tracking-wider text-sandbox-muted flex items-center gap-2">
               <Newspaper className="w-3.5 h-3.5" /> Live Feed
@@ -235,7 +235,7 @@ export default function MarketsPage() {
         </div>
 
         {/* Right Column: Detail View — independently scrollable */}
-        <div className="flex-1 glass-panel rounded-2xl flex flex-col min-w-0 overflow-hidden relative z-0">
+        <div className={`${!activeItem ? 'hidden md:flex' : 'flex'} flex-1 glass-panel rounded-2xl flex-col min-w-0 overflow-hidden relative z-0`}>
           {!activeItem ? (
             <div className="flex-1 flex flex-col items-center justify-center text-sandbox-muted gap-3">
               <Newspaper className="w-10 h-10 opacity-30" />
@@ -243,10 +243,18 @@ export default function MarketsPage() {
             </div>
           ) : (
             <div className="flex-1 overflow-y-auto">
-              <div className="p-8 max-w-3xl">
+              <div className="p-4 sm:p-8 max-w-3xl">
+
+                {/* Mobile Back Button */}
+                <button 
+                  onClick={() => setActiveItem(null)} 
+                  className="md:hidden flex items-center gap-2 text-sm font-bold text-brand-purple mb-4 hover:text-white transition-colors"
+                >
+                  ← Back to Feed
+                </button>
 
                 {/* Headline */}
-                <h1 className="text-2xl font-extrabold tracking-tight text-white mb-8 leading-tight">
+                <h1 className="text-xl sm:text-2xl font-extrabold tracking-tight text-white mb-6 sm:mb-8 leading-tight">
                   {activeItem.title}
                 </h1>
 

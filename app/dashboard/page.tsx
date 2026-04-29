@@ -179,9 +179,9 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-transparent text-white font-sans selection:bg-brand-purple/30 selection:text-white pb-20">
       
       
-      <main className="max-w-5xl mx-auto px-6 pt-12">
-        <div className="mb-10">
-          <h1 className="text-3xl font-extrabold tracking-tight mb-2">My Account</h1>
+      <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12">
+        <div className="mb-8 sm:mb-10">
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">My Account</h1>
           <p className="text-sandbox-muted">Your profile, credits, and strategy history.</p>
         </div>
 
@@ -203,7 +203,7 @@ export default function DashboardPage() {
                 <span className="text-sm text-sandbox-muted font-mono">/ {MAX_CREDITS}</span>
               </div>
               {/* Progress bar */}
-              <div className="w-64 h-2 bg-white/10 rounded-full overflow-hidden">
+              <div className="w-full sm:w-64 h-2 bg-white/10 rounded-full overflow-hidden">
                 <div 
                   className="h-full rounded-full transition-all duration-500 bg-gradient-to-r from-brand-purple to-[#d8b4fe]"
                   style={{ width: `${creditPercentage}%` }}
@@ -452,7 +452,7 @@ export default function DashboardPage() {
 
           {/* Right Column: Stats & Work History */}
           <div className="md:col-span-2 space-y-6">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               <div className="glass-panel rounded-xl p-5">
                 <div className="flex items-center gap-2 mb-2 text-sandbox-muted">
                   <Target className="w-4 h-4" />
