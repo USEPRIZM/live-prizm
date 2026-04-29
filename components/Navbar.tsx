@@ -34,8 +34,20 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-8 bg-white/5 border border-white/10 rounded-full px-6 py-2 backdrop-blur-md">
           <Link href="/features" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Features</Link>
           <Link href="/markets" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Markets</Link>
-          <Link href="/quant" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Quant Edge</Link>
-          <Link href="/sandbox" className="text-sm font-semibold text-slate-300 hover:text-white transition-colors">Sandbox</Link>
+          <Link 
+            href={user ? "/quant" : "#"} 
+            onClick={(e) => { if (!user) { e.preventDefault(); setIsLoginOpen(true); } }}
+            className="text-sm font-semibold text-slate-300 hover:text-white transition-colors"
+          >
+            Quant Edge
+          </Link>
+          <Link 
+            href={user ? "/sandbox" : "#"} 
+            onClick={(e) => { if (!user) { e.preventDefault(); setIsLoginOpen(true); } }}
+            className="text-sm font-semibold text-slate-300 hover:text-white transition-colors"
+          >
+            Sandbox
+          </Link>
         </div>
 
         <div className="flex items-center gap-4">
