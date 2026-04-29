@@ -36,7 +36,7 @@ app = FastAPI(title="Prizm Backend API", lifespan=lifespan)
 # Allow Next.js on localhost:3000 to interact with FastAPI
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
