@@ -241,7 +241,7 @@ export default function DashboardPage() {
               <div className="h-24 bg-gradient-to-r from-brand-purple/20 to-brand-purple/5 relative">
                 <div className="absolute -bottom-10 left-6">
                   <div className="w-20 h-20 rounded-xl bg-sandbox-bg border-4 border-sandbox-panel flex items-center justify-center text-2xl font-bold text-white shadow-lg">
-                    {profile.name.charAt(0)}
+                    {profile.name?.charAt(0) || "U"}
                   </div>
                 </div>
               </div>
