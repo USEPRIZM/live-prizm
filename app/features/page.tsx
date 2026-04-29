@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ShieldCheck, Activity, BrainCircuit, Globe2, BarChart3, ChevronRight } from "lucide-react";
+import { ArrowLeft, ShieldCheck, Activity, BrainCircuit, Globe2, BarChart3, ChevronRight, Target, Newspaper, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function FeaturesPage() {
@@ -26,8 +26,69 @@ export default function FeaturesPage() {
         </motion.div>
       </section>
 
-      {/* Features Grid */}
+      {/* Core Tools — Explained Simply */}
+      <section id="core-tools" className="max-w-5xl mx-auto px-6 pb-20 relative z-10 scroll-mt-24">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.15 }}>
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold tracking-widest mb-4 uppercase">
+              New to Trading?
+            </div>
+            <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-white">Our Core Tools — Explained Simply</h2>
+            <p className="text-slate-400 mt-3 max-w-xl mx-auto">No jargon. Here&apos;s what each tool does in plain English.</p>
+          </div>
+
+          <div className="space-y-6">
+            {/* Sandbox */}
+            <div id="sandbox-explained" className="bg-gradient-to-r from-brand-purple/10 to-transparent border border-brand-purple/20 rounded-2xl p-8 flex items-start gap-6 scroll-mt-24">
+              <div className="w-14 h-14 rounded-xl bg-brand-purple/20 border border-brand-purple/30 flex items-center justify-center shrink-0">
+                <Target className="w-7 h-7 text-brand-purple" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">The Sandbox <span className="text-sm font-mono text-brand-purple">(Strategy Builder & Backtester)</span></h3>
+                <p className="text-slate-300 leading-relaxed text-sm">
+                  The Sandbox is your risk-free testing ground. Instead of guessing if a trading idea works and risking real money to find out, you can just type your idea in plain English (like <em className="text-white">&quot;buy when the stock drops 5% and volume is high&quot;</em>). Our AI understands your sentence, builds the logic, and instantly tests your idea against years of real historical stock data. Within seconds, it shows you exactly how much money that strategy would have made or lost — including all real Indian taxes and fees deducted automatically.
+                </p>
+              </div>
+            </div>
+
+            {/* Quant Edge */}
+            <div id="quant-explained" className="bg-gradient-to-r from-emerald-500/10 to-transparent border border-emerald-500/20 rounded-2xl p-8 flex items-start gap-6 scroll-mt-24">
+              <div className="w-14 h-14 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
+                <Sparkles className="w-7 h-7 text-emerald-400" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Quant Edge <span className="text-sm font-mono text-emerald-400">(Alternative Data & AI Insights)</span></h3>
+                <p className="text-slate-300 leading-relaxed text-sm">
+                  Quant Edge lets you trade based on real-world events, not just price charts. Billion-dollar hedge funds use &quot;alternative data&quot; to get an unfair advantage — like tracking Google search trends or shipping routes. We bring that power directly to you. You can ask our AI to analyze complex real-world relationships, like <em className="text-white">&quot;What happens to Indian auto stocks when global oil prices go up?&quot;</em>, and it will instantly give you a data-backed answer so you can trade ahead of the curve.
+                </p>
+              </div>
+            </div>
+
+            {/* Market Pulse */}
+            <div id="market-explained" className="bg-gradient-to-r from-blue-500/10 to-transparent border border-blue-500/20 rounded-2xl p-8 flex items-start gap-6 scroll-mt-24">
+              <div className="w-14 h-14 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
+                <Newspaper className="w-7 h-7 text-blue-400" />
+              </div>
+              <div>
+                <h3 className="text-xl font-bold text-white mb-2">Market Pulse <span className="text-sm font-mono text-blue-400">(Live News Analysis)</span></h3>
+                <p className="text-slate-300 leading-relaxed text-sm">
+                  Market Pulse is your intelligent financial news reader. The stock market moves fast, and reading hundreds of long articles to find a trading opportunity is impossible. Market Pulse scans the latest live headlines and uses AI to instantly summarize what the news actually means for the market. Instead of just giving you a boring article, it tells you exactly which specific stocks might go up (Bullish) or down (Bearish) because of that news, saving you hours of research.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* Advanced Features Grid */}
       <section className="max-w-6xl mx-auto px-6 py-12 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-400 text-xs font-bold tracking-widest mb-4 uppercase">
+            Under the Hood
+          </div>
+          <h2 className="text-3xl md:text-4xl font-extrabold tracking-tighter text-white">Advanced Capabilities</h2>
+          <p className="text-slate-400 mt-3 max-w-xl mx-auto">The institutional-grade technology powering your strategies.</p>
+        </div>
         <div className="grid md:grid-cols-2 gap-6">
           
           {/* Feature 1 */}
@@ -110,9 +171,10 @@ export default function FeaturesPage() {
             <div className="flex items-center gap-3 mb-4">
               <BarChart3 className="w-6 h-6 text-yellow-400" />
               <h3 className="text-2xl font-bold text-white">Realistic Indian Tax Simulation</h3>
+              <span className="ml-2 px-2 py-0.5 rounded-md bg-yellow-400/10 border border-yellow-400/20 text-yellow-400 text-[10px] font-bold uppercase tracking-wider">Built into the Sandbox</span>
             </div>
             <p className="text-slate-400 leading-relaxed text-sm max-w-2xl">
-              Paper trading platforms lie to you. They assume every trade executes perfectly for free. Prizm simulates the harsh reality of the Indian market. Every backtest automatically subtracts Zerodha Brokerage, STT (Securities Transaction Tax), Exchange Fees, GST, Stamp Duty, and Execution Slippage. If your strategy survives our engine, it can survive the real world.
+              Paper trading platforms lie to you. They assume every trade executes perfectly for free. Prizm simulates the harsh reality of the Indian market. Every backtest you run in the Sandbox automatically subtracts Zerodha Brokerage, STT (Securities Transaction Tax), Exchange Fees, GST, Stamp Duty, and Execution Slippage. There is no separate page for this — it&apos;s always active. If your strategy survives our engine, it can survive the real world.
             </p>
           </div>
           <Link href="/sandbox" className="shrink-0 px-8 py-4 rounded-xl bg-white text-black font-extrabold tracking-wide hover:scale-105 transition-transform flex items-center gap-2">
